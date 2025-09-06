@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional Portfolio — Talamnchi Sushmanth</title>
+  <meta name="description" content="Professional portfolio of Talamnchi Sushmanth — Web developer, designer, and problem solver." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      color-scheme: dark;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071025);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+
+    .container{max-width:1100px;margin:48px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:54px;height:54px;background:linear-gradient(135deg,var(--accent),#7c3aed);border-radius:12px;display:grid;place-items:center;font-weight:800}
+    .brand h1{margin:0;font-size:20px}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{padding:10px 12px;border-radius:10px;font-weight:600;color:var(--muted)}
+    nav a.primary{background:var(--glass);color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:36px;align-items:center}
+    .intro h2{margin:0;font-size:34px;line-height:1.05}
+    .intro p{color:var(--muted);margin-top:12px;font-size:15px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);box-shadow: 0 6px 18px rgba(2,6,23,0.6)}
+    .profile-pic{width:100%;height:320px;border-radius:12px;object-fit:cover;background:linear-gradient(180deg,#123,#234)}
+
+    .metrics{display:flex;gap:12px;margin-top:18px}
+    .metric{flex:1;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);text-align:center}
+    .metric strong{display:block;font-size:18px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:600;color:var(--muted)}
+
+    section.projects{margin-top:36px}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent)}
+    .project h3{margin:0 0 8px 0}
+    .project p{color:var(--muted);font-size:14px;margin:0}
+    .project .tags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+
+    .about-contact{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:28px}
+    .about p{color:var(--muted);line-height:1.6}
+
+    footer{margin-top:36px;padding:20px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr 320px}
+      .projects-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:760px){
+      .hero{grid-template-columns:1fr;}
+      .projects-grid{grid-template-columns:1fr}
+      .about-contact{grid-template-columns:1fr}
+      nav{display:none}
+      .container{padding:18px;margin:20px}
+    }
+
+    /* small UI polish */
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:700;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#041226}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:8px 12px;border-radius:10px}
+    .project .links{margin-top:12px;display:flex;gap:10px}
+    input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit}
+    label{display:block;margin:8px 0;font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div>
+          <h1>Talamnchi Sushmanth</h1>
+          <div style="color:var(--muted);font-size:13px">Web Developer • UI/UX Enthusiast • Problem Solver</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="primary">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="card intro">
+            <h2>Hi, I' m <span style="color:var(--accent)">Talamnchi Sushmanth</span> — I build thoughtful digital products.</h2>
+            <p>I design and develop web applications with a focus on performance, accessibility, and beautiful user experiences. Currently open to freelance and full-time opportunities.</p>
+            <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+              <a class="btn" href="#contact">Hire Me</a>
+              <a class="ghost" href="/resume.pdf" target="_blank">Download Resume</a>
+            </div>
+
+            <div class="metrics">
+              <div class="metric"><strong>-</strong><span class="muted">Fresher </span></div>
+              <div class="metric"><strong>4+</strong><span class="muted">Projects</span></div>
+              <div class="metric"><strong>2</strong><span class="muted">Internship's</span></div>
+            </div>
+
+            <div style="margin-top:14px">
+              <div style="font-weight:700;margin-bottom:8px">Top skills</div>
+              <div class="skills">
+                <div class="skill">JAVA</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+             
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <img class="profile-pic" src="https://raw.githubusercontent.com/Sushu459/my-photos/main/pic1.jpg">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+              <div>
+                <div style="font-weight:800">Talamnchi Sushmanth</div>
+                <div style="color:var(--muted);font-size:13px">MERN Stack Developer</div>
+              </div>
+              <div style="text-align:right;color:var(--muted);font-size:13px">Andhra Pradesh,Nellore</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2 style="margin-bottom:12px">Selected Projects</h2>
+        <div class="projects-grid">
+          <article class="project card">
+            <h3>Project One</h3>
+            <p>Mobile app built with Android Studio for calculating student attendance percentage, featuring input validation, progress tracking, and polished UI.</p>
+            <div class="tags"><span class="skill">React</span><span class="skill">Node</span><span class="skill">Realtime</span></div>
+            <div class="links"><a href="#">Live</a><a href="#">Code</a></div>
+          </article>
+
+          <article class="project card">
+            <h3>Project Two</h3>
+            <p>Cross-platform mobile app developed with Lovable for live video streaming, featuring camera access, recording with watermark, local storage, and direct YouTube integration.</p>
+            <div class="tags"><span class="skill">Design System</span><span class="skill">Accessibility</span></div>
+            <div class="links"><a href="#">Design</a><a href="#">Code</a></div>
+          </article>
+
+          <article class="project card">
+            <h3>Project Three</h3>
+            <p>
+  AI-powered travel assistant app designed to provide personalized itineraries, 
+  recommendations, and real-time guidance, built with advanced prompt engineering 
+  and integration of AI APIs.
+</p>
+<div class="tags">
+  <span class="skill">Android Studio</span>
+  <span class="skill">Chatbot</span>
+  <span class="skill">AI</span>
+</div>
+<div class="links">
+  <a href="#">Live</a>
+  <a href="#">Case Study</a>
+</div>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="about" class="about-contact">
+        <div class="card about">
+          <h2>About Me</h2>
+          <p> I'm a mobile and web developer who enjoys building apps that solve real problems. 
+  From creating an Attendance Calculator in Android Studio to developing GoLive for streaming 
+  and TravelMate AI as a smart travel assistant, I’ve explored different technologies to 
+  turn ideas into functional, polished products.</p>
+
+          <h3 style="margin-top:18px">What I do</h3>
+          <ul style="color:var(--muted)">
+            <li>Develop Android apps with clean, efficient code</li>
+          <li>Build AI-powered assistants and chatbot experiences</li>
+        <li>Create user-friendly designs with focus on simplicity and usability</li>
+          </ul>
+        </div>
+
+        <aside class="card" id="contact">
+          <h2>Contact</h2>
+          <p style="color:var(--muted);margin-top:6px">Interested in working together? Send a message or email me directly.</p>
+
+          <form action="mailto:your.email@example.com" method="post" enctype="text/plain" style="margin-top:12px">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your full name">
+            <label for="email">Email</label>
+            <input id="email" name="email" placeholder="you@example.com">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Brief message"></textarea>
+            <div style="margin-top:12px;display:flex;gap:10px">
+              <button type="submit" class="btn">Send</button>
+              <a class="ghost" href="mailto:your.email@example.com">Email me</a>
+            </div>
+          </form>
+
+          <div style="margin-top:16px">
+            <div style="font-weight:700;margin-bottom:8px">Social</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <a href="https://www.linkedin.com/in/talamanchi-sushmanth" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Sushu459" target="_blank">GitHub</a>
+
+              <a href="https://leetcode.com/u/sush459/" target="_blank">LeetCode</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="yr"></span> Talamanchi Eswar — Built with care. • <a href="#">Privacy</a>
+    </footer>
+  </div>
+
+  <script>
+    // small JS helpers
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
